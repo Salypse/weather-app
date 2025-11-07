@@ -1,0 +1,94 @@
+:root {
+    --primary-blue: #264653;
+    --primary-green: #2a9d8f;
+    --primary-yellow: #e9c46a;
+    --primary-orange: #f4a261;
+    --primary-red: #e76f51;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--primary-blue);
+}
+
+.content {
+    width: 30vw;
+    height: 70vh;
+
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#location-data {
+    visibility: hidden;
+}
+
+#default-text {
+    color: var(--primary-yellow);
+    font-size: clamp(2.5vw, 1.5rem, 3.5vw);
+    font-weight: 700;
+    text-align: center;
+}
+
+
+#location-form {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 80%;
+    height: 5vh;
+
+    border: var(--primary-green) .4rem solid;
+    outline: transparent;
+}
+
+#location-form > input {
+    width: 100%;
+    height: 100%;
+    
+    padding-left: 0.2rem;
+
+    font-size: clamp(1vw, 1.2rem, 5vw);
+    border: transparent;
+    outline: transparent;
+}
+
+#location-form > button {
+    height: 100%;
+    width: 15%;
+
+    background-color: var(--primary-green);
+    border: transparent;
+}
+
+#location-form > button > img {
+    width: 100%;
+    height: 100%;
+}
+
+#location-form > button > img:hover {
+    content: url("./images/search-icon-dark.svg")
+}
+
+#location-form > button > img:active {
+    content: url("./images/search-icon.svg")
+}

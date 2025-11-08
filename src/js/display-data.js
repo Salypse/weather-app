@@ -17,12 +17,12 @@ export const displayData = function(data) {
     /* Location Feels Like */
     const locationFeelsLike = document.createElement("p")
     locationFeelsLike.id = "location-feels-like"
-    locationFeelsLike.textContent = `Feels Like: ${data.currentFeelsLike}`
+    locationFeelsLike.textContent = `Feels Like: °${data.currentFeelsLike}`
 
     /* Location Current Temp */
     const locationTemp = document.createElement("p")
     locationTemp.id = "location-temp"
-    locationTemp.textContent = `Temp: ${data.currentTemp}`
+    locationTemp.textContent = `Temp: °${data.currentTemp}`
 
     locationData.append(
         dataHeader,
@@ -47,6 +47,5 @@ function clearData() {
 
 /* TODO
     input validation
-    loading text bar
     Style Data Card
 */

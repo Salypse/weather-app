@@ -20,6 +20,7 @@ export async function getLocationData(location) {
 
     try {
         const data = await callWeatherApi(location)
+        console.log(data)
         loadingBar.style.display = "none"
 
         return {

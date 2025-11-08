@@ -1,5 +1,6 @@
 import "./styles.css"
 import { getLocationData } from "../src/js/weather-data"
+import { displayData } from "./js/display-data";
 
 async function contentHandler() {
     const locationForm = document.getElementById("location-form")
@@ -10,7 +11,7 @@ async function contentHandler() {
 
         try {
             const response = await getLocationData(locationInput.value)
-            console.log(response)
+            displayData(response)
         } catch (error) {
             console.error(`Error submitting form: ${error}`)
         }

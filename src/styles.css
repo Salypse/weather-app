@@ -37,7 +37,44 @@ body {
 }
 
 #location-data {
-    visibility: hidden;
+    display: none;
+
+    width: 20vw;
+    height: 20vw;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr 1fr;
+
+    background-color: var(--primary-yellow);
+    border: var(--primary-orange) 1vw solid;
+}
+
+#location-data > h1 {
+    grid-area: 1 / 1 / 2 / -1;
+    padding: 0.5rem;
+
+    font-size: clamp(1vw, 1.5rem, 3vw);
+    color: var(--primary-red);
+    text-align: center;
+
+    border-bottom: var(--primary-orange) 0.7vw solid;
+}
+
+#location-data > p {
+    padding: 0.5rem;
+    text-align: center;
+    align-self: center;
+    
+
+    font-size: clamp(1vw, 1rem, 2.5vw);
+    font-weight: 700;
+    color: var(--primary-red)
+}
+
+#location-data > #location-temp {
+    grid-area: 3/ 1 / -1 / -1;
+
+    font-size: clamp(1rem, 3vw, 2rem);
 }
 
 #default-text {

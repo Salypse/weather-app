@@ -19,17 +19,19 @@ export async function getLocationData(location) {
         const data = await callWeatherApi(location)
 
         return {
-            "currentCondition": data.currentConditions.conditions || "Not available",
-            "currentFeelsLike": data.currentConditions.feelslike || "Not available",
-            "currentTemp": data.currentConditions.temp || "Not available",
+            "locationName": data.resolvedAddress || "NA",
+            "currentCondition": data.currentConditions.conditions || "NA",
+            "currentFeelsLike": data.currentConditions.feelslike || "NA",
+            "currentTemp": data.currentConditions.temp || "NA",
         }
     } catch (error) {
         //If error return default values
         console.error("Error: Couldn't get weather data")
             return {
-                "currentCondition": "Not available",
-                "currentFeelsLike": "Not available",
-                "currentTemp": "Not available",
+                "locationName": location,
+                "currentCondition": "NA",
+                "currentFeelsLike": "NA",
+                "currentTemp": "NA",
             }
     }
 }

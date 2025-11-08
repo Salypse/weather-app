@@ -30,10 +30,6 @@ export const displayData = function(data) {
         locationFeelsLike,
         locationTemp,
     )
-
-    /* TODO
-        Style Location Data
-    */
 }
 
 
@@ -47,6 +43,10 @@ function clearData() {
     }
     locationData.innerHTML = ""
     locationInput.value = ""
-
-    /* Reset Location Data */
 }
+
+/* TODO
+    input validation
+    loading text bar
+    Style Data Card
+*/

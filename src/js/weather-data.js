@@ -15,8 +15,12 @@ async function callWeatherApi(location) {
 }
 
 export async function getLocationData(location) {
+    const loadingBar = document.getElementById("loading")
+    loadingBar.style.display = "block"
+
     try {
         const data = await callWeatherApi(location)
+        loadingBar.style.display = "none"
 
         return {
             "locationName": data.resolvedAddress || "NA",

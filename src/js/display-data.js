@@ -17,12 +17,12 @@ export const displayData = function(data) {
     /* Location Feels Like */
     const locationFeelsLike = document.createElement("p")
     locationFeelsLike.id = "location-feels-like"
-    locationFeelsLike.textContent = `Feels Like: ${data.currentFeelsLike}`
+    locationFeelsLike.textContent = `Feels Like: °${data.currentFeelsLike}`
 
     /* Location Current Temp */
     const locationTemp = document.createElement("p")
     locationTemp.id = "location-temp"
-    locationTemp.textContent = `Temp: ${data.currentTemp}`
+    locationTemp.textContent = `Temp: °${data.currentTemp}`
 
     locationData.append(
         dataHeader,
@@ -30,10 +30,6 @@ export const displayData = function(data) {
         locationFeelsLike,
         locationTemp,
     )
-
-    /* TODO
-        Style Location Data
-    */
 }
 
 
@@ -47,6 +43,9 @@ function clearData() {
     }
     locationData.innerHTML = ""
     locationInput.value = ""
-
-    /* Reset Location Data */
 }
+
+/* TODO
+    input validation
+    Style Data Card
+*/

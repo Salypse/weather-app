@@ -137,3 +137,18 @@ body {
 #location-form > button > img:active {
     content: url("./images/search-icon.svg")
 }
+
+.active {
+    width: 20vw;
+    height: auto;
+
+    padding: 0.4rem;
+
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #000;
+    background-color: red;
+
+    border: #000 0.2vw solid;
+}

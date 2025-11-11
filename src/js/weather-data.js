@@ -20,7 +20,6 @@ export async function getLocationData(location) {
 
     try {
         const data = await callWeatherApi(location)
-        console.log(data)
         loadingBar.style.display = "none"
 
         return {
@@ -31,7 +30,7 @@ export async function getLocationData(location) {
         }
     } catch (error) {
         //If error return default values
-        console.error("Error: Couldn't get weather data")
+        console.error(`Error: Couldn't get weather data for ${location}`)
             return {
                 "locationName": location,
                 "currentCondition": "NA",

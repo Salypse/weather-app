@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+<script defer src="main.js"></script></head>
+<body>
+    <div class="content">
+        <p id="default-text">Enter a Location below to see its current weather</p>
+
+        <div id="location-data"></div>
+        <p id="loading">Loading</p>
+
+        <form id="location-form" novalidate>
+            <input id="location-input" placeholder="Location Name" required>
+            <button id="submit-location">
+                <img src="8b6ca2bb118e215d52c9.svg">
+            </button>
+        </form>
+        <span class="error"></span>
+    </div>
+</body>
+</html>
